@@ -1,0 +1,167 @@
+/* Responsive */
+@media (max-width: 1024px) {
+    .postal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 64px;
+    }
+
+    .site-header__toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 80px 24px 40px;
+        background: var(--color-dark);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .site-nav.is-open {
+        transform: translateX(0);
+    }
+
+    .site-nav a {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 1.05rem;
+    }
+
+    .hero {
+        height: clamp(70vh, 80vh, 90vh);
+        min-height: 500px;
+    }
+
+    .hero__content {
+        padding: 0 5% 48px;
+    }
+
+    .hero__title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    .texto .destaque {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid var(--color-accent);
+        padding-top: 20px;
+    }
+
+    .imagem {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .postal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-bar__divider {
+        display: none;
+    }
+
+    .stats-bar__grid {
+        gap: 24px;
+    }
+
+    .cta-card {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-nav {
+        width: 100%;
+    }
+
+    .hero {
+        height: clamp(60vh, 75vh, 85vh);
+        min-height: 450px;
+    }
+
+    .hero__badge {
+        font-size: 0.65rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .hero__subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+    }
+
+    .postal-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .section-header__title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .section-header__desc {
+        font-size: 0.95rem;
+    }
+
+    .stats-bar {
+        padding: 28px 5%;
+    }
+
+    .stats-bar__item {
+        padding: 0 20px;
+    }
+
+    .galeria-home,
+    .historia,
+    .postais-home,
+    .chronicles-home,
+    .cta-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero__title {
+        font-size: 1.8rem;
+    }
+
+    .stats-bar__number {
+        font-size: 1.5rem;
+    }
+}

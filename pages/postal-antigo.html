@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça um postal antigo de Parnaíba e seu valor para a memória visual da cidade.">
+    <title>Postal Antigo | Postais da Parnaíba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/postal.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__logo"><span class="site-header__logo-icon">✦</span>
+                
+                <span class="site-header__logo-text">Postais da Parnaíba</span>
+            </a>
+
+            <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="main-nav" aria-label="Navegação principal">
+                <a href="../index.html">Início</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="livro.html">Livro</a>
+                <a href="blog.html">Blog</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="postal-page">
+        <section class="postal-hero">
+            <div class="postal-banner">
+                <img src="../images/postal-antigo-01.png" alt="Postal antigo com vista urbana de Parnaíba" loading="eager">
+            </div>
+        </section>
+
+        <section class="postal-content" aria-labelledby="postal-title">
+            <header class="postal-heading">
+                <h2 id="postal-title">Postal Antigo</h2>
+                <p class="postal-subtitle">Parnaíba - década de 1950</p>
+            </header>
+
+            <div class="postal-text">
+                <p>Os postais antigos condensam paisagem, arquitetura e memória em uma única imagem. Em Parnaíba, eles revelam a forma como a cidade era apresentada a moradores, visitantes e viajantes que levavam consigo uma lembrança visual de seus espaços mais simbólicos.</p>
+                <p>Mais do que peças gráficas, esses registros funcionam como documentos históricos. Eles ajudam a identificar transformações urbanas, modos de circulação e elementos da vida cotidiana que, com o tempo, se tornaram parte do patrimônio afetivo da cidade.</p>
+            </div>
+
+            <section class="postal-gallery" aria-labelledby="postal-gallery-title">
+                <h3 id="postal-gallery-title" class="section-title">Imagens relacionadas</h3>
+                <div class="linha"></div>
+                <div class="postal-gallery-grid">
+                    <img src="../images/postal-antigo-01.png" alt="Outra vista antiga de Parnaíba" loading="lazy">
+                    <img src="../images/centro-historico-arquitetura.png" alt="Arquitetura histórica de Parnaíba" loading="lazy">
+                    <img src="../images/centro-historico-cena-urbana.png" alt="Cena urbana antiga de Parnaíba" loading="lazy">
+                </div>
+            </section>
+
+            <section class="antes-depois" aria-labelledby="antes-depois-title">
+                <div class="antes-depois__header">
+                    <div>
+                        <h3 id="antes-depois-title">Antes e Depois</h3>
+                        <p class="antes-depois__subtitle">Compare o postal histórico com o registro atual .</p>
+                    </div>
+                    <button type="button" class="btn btn--secondary antes-depois__toggle" aria-expanded="false">Ver Antes e Depois</button>
+                </div>
+                <div class="antes-depois__content" hidden>
+                    <div class="before-after" data-label-before="Antes" data-label-after="Depois">
+                        <div class="before-after__images">
+                            <img src="../images/postal-antigo-01.png" alt="Postal Antigo - postal histórico" class="before-after__img before-after__img--before">
+                            <img src="../images/postal-antigo-01-atual.png" alt="Postal Antigo - foto atual" class="before-after__img before-after__img--after">
+                            <div class="before-after__divider" aria-hidden="true"></div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="before-after__range" aria-label="Controlar antes e depois">
+                        <div class="before-after__labels" aria-hidden="true">
+                            <span>Antes</span>
+                            <span>Depois</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="postal-actions">
+                <a href="../index.html" class="btn btn--primary">Voltar para home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="site-footer__logo">✦ Postais da Parnaíba</span>
+                <p>Museu digital de memória visual da cidade de Parnaíba.</p>
+            </div>
+            <div class="site-footer__links">
+                <a href="galeria.html">Galeria</a>
+                <a href="livro.html">Livro</a>
+                <a href="sobre.html">Sobre</a>
+            </div>
+            <div class="site-footer__bottom">
+                <p>© 2026 Postais da Parnaíba — Desenvolvido por Sallys Martins</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/antes-depois.js"></script>
+</body>
+</html>

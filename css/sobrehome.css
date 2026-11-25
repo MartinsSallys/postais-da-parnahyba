@@ -1,0 +1,83 @@
+/* History Section */
+.historia {
+    padding: var(--spacing-4xl) 5%;
+    background: var(--color-surface);
+    position: relative;
+}
+
+.historia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border-soft), transparent);
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.texto .destaque {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.texto p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.imagem {
+    position: relative;
+}
+
+.imagem__frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+}
+
+.imagem__frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.imagem__frame img {
+    width: 100%;
+    display: block;
+    filter: grayscale(30%) sepia(8%);
+    transition: filter var(--transition-slow), transform var(--transition-slow);
+}
+
+.imagem__frame:hover img {
+    filter: grayscale(0%) sepia(0%);
+    transform: scale(1.02);
+}
+
+.imagem__caption {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--color-muted);
+    letter-spacing: 0.02em;
+}

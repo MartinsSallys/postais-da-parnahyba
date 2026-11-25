@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Postal sobre o Ginásio São Luiz Gonzaga e sua presença na formação educacional de Parnaíba.">
+    <title>Ginásio São Luiz Gonzaga | Postais da Parnaíba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/hero.css">
+    <link rel="stylesheet" href="../../css/postal.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="site-header__inner">
+            <a href="../../index.html" class="site-header__logo"><span class="site-header__logo-icon">✦</span>
+                
+                <span class="site-header__logo-text">Postais da Parnaíba</span>
+            </a>
+
+            <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="main-nav" aria-label="Navegação principal">
+                <a href="../../index.html">Início</a>
+                <a href="../galeria.html">Galeria</a>
+                <a href="../livro.html">Livro</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../sobre.html">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="postal-page">
+        <section class="postal-hero">
+            <div class="postal-banner">
+                <img src="../../images/ginasio-sao-luiz-gonzaga.png" alt="Ginásio São Luiz Gonzaga em registro histórico" loading="eager">
+            </div>
+        </section>
+
+        <section class="postal-content" aria-labelledby="postal-title">
+            <header class="postal-heading">
+                <h2 id="postal-title">Ginásio São Luiz Gonzaga</h2>
+                <p class="postal-subtitle">Parnaíba - educação e cidadania</p>
+            </header>
+
+            <div class="postal-text">
+                <p>O Ginásio São Luiz Gonzaga formou gerações de estudantes e aparece nos postais como símbolo de educação e modernização. Sua arquitetura e presença urbana ajudam a contar a história de uma Parnaíba que investia em ensino e em novas oportunidades.</p>
+                <p>Na memória afetiva da cidade, o ginásio representa encontros, descobertas e a construção de laços comunitários que extrapolam as salas de aula.</p>
+            </div>
+
+            <section class="postal-gallery" aria-labelledby="postal-gallery-title">
+                <h3 id="postal-gallery-title" class="section-title">Imagens relacionadas</h3>
+                <div class="linha"></div>
+                <div class="postal-gallery-grid">
+                    <img src="../../images/cine-teatro-eden.png" alt="Fachada do Cine-Teatro Éden em 1928" loading="lazy">
+                    <img src="../../images/delta-do-parnaiba.png" alt="Lavadeiras no Rio Igaraçu nos anos 40" loading="lazy">
+                    <img src="../../images/porto-das-barcas.png" alt="Porto das Barcas e Alfândega de Parnaíba" loading="lazy">
+                </div>
+            </section>
+
+            <section class="antes-depois" aria-labelledby="antes-depois-title">
+                <div class="antes-depois__header">
+                    <div>
+                        <h3 id="antes-depois-title">Antes e Depois</h3>
+                        <p class="antes-depois__subtitle">Compare o postal histórico com o registro atual .</p>
+                    </div>
+                    <button type="button" class="btn btn--secondary antes-depois__toggle" aria-expanded="false">Ver Antes e Depois</button>
+                </div>
+                <div class="antes-depois__content" hidden>
+                    <div class="before-after" data-label-before="Antes" data-label-after="Depois">
+                        <div class="before-after__images">
+                            <img src="../../images/ginasio-sao-luiz-gonzaga.png" alt="Ginásio São Luiz Gonzaga - postal histórico" class="before-after__img before-after__img--before">
+                            <img src="../../images/ginasio-sao-luiz-gonzaga-atual.png" alt="Ginásio São Luiz Gonzaga - foto atual" class="before-after__img before-after__img--after">
+                            <div class="before-after__divider" aria-hidden="true"></div>
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="before-after__range" aria-label="Controlar antes e depois">
+                        <div class="before-after__labels" aria-hidden="true">
+                            <span>Antes</span>
+                            <span>Depois</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="postal-actions">
+                <a href="../galeria.html" class="btn btn--primary">Voltar para Galeria</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="site-footer__logo">✦ Postais da Parnaíba</span>
+                <p>Museu digital de memória visual da cidade de Parnaíba.</p>
+            </div>
+            <div class="site-footer__links">
+                <a href="../galeria.html">Galeria</a>
+                <a href="../livro.html">Livro</a>
+                <a href="../sobre.html">Sobre</a>
+            </div>
+            <div class="site-footer__bottom">
+                <p>© 2026 Postais da Parnaíba — Desenvolvido por Sallys Martins</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/antes-depois.js"></script>
+</body>
+</html>

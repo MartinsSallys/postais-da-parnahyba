@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog do projeto Postais da Parnaíba com histórias, memórias e destaques do acervo visual.">
+    <title>Blog | Postais da Parnaíba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/cronicas.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="site-header" id="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__logo"><span class="site-header__logo-icon">✦</span>
+                
+                <span class="site-header__logo-text">Postais da Parnaíba</span>
+            </a>
+
+            <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="site-nav" id="main-nav" aria-label="Navegação principal">
+                <a href="../index.html">Início</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="livro.html">Livro</a>
+                <a href="blog.html">Blog</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog" aria-labelledby="blog-title">
+            <div class="container-blog">
+                <h2 id="blog-title" class="section-title">Blog</h2>
+                <div class="linha-blog"></div>
+
+                <div class="grid-blog" id="blog-grid">
+                    <div class="loading-spinner">Carregando artigos...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="site-footer__logo">✦ Postais da Parnaíba</span>
+                <p>Museu digital de memória visual da cidade de Parnaíba.</p>
+            </div>
+            <div class="site-footer__links">
+                <a href="galeria.html">Galeria</a>
+                <a href="livro.html">Livro</a>
+                <a href="sobre.html">Sobre</a>
+            </div>
+            <div class="site-footer__bottom">
+                <p>© 2026 Postais da Parnaíba — Desenvolvido por Sallys Martins</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/config.js"></script>
+    <script src="../js/public.js"></script>
+    <script>
+    (async function() {
+        var grid = document.getElementById("blog-grid");
+        if (!grid) return;
+        grid.innerHTML = '<p class="empty-state">Carregando artigos...</p>';
+        try {
+            var data = await fetchJson("/posts?size=50");
+            var posts = data.items || [];
+            if (!posts.length) {
+                grid.innerHTML = '<p class="empty-state">Nenhum artigo publicado ainda.</p>';
+                return;
+            }
+            grid.innerHTML = posts.map(function(p) { return renderPostCard(p, ".."); }).join("");
+        } catch (e) {
+            grid.innerHTML =
+                '<p class="empty-state">Erro ao carregar artigos.</p>' +
+                '<p class="empty-state">O servidor pode estar iniciando; tente novamente em alguns segundos.</p>' +
+                '<p class="empty-state"><button type="button" onclick="location.reload()">Tentar novamente</button></p>';
+        }
+    })();
+    </script>
+</body>
+</html>

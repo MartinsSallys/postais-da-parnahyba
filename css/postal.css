@@ -1,0 +1,197 @@
+/* Postal Detail Page */
+.postal-page {
+    background: var(--color-surface);
+}
+
+.postal-hero {
+    padding: 48px 20px 0;
+}
+
+.postal-banner {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: #d5c7b1;
+    box-shadow: var(--shadow-strong);
+}
+
+.postal-banner img {
+    width: 100%;
+    height: clamp(320px, 56vh, 560px);
+    object-fit: cover;
+}
+
+.postal-content {
+    width: min(100% - 40px, 980px);
+    margin: 0 auto;
+    padding: 56px 0 84px;
+}
+
+.postal-heading {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.postal-heading h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 10px;
+}
+
+.postal-subtitle {
+    color: var(--color-primary-light);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.postal-text {
+    margin-bottom: 42px;
+    padding: 0 12px;
+}
+
+.postal-text p + p {
+    margin-top: 18px;
+}
+
+.postal-gallery {
+    margin-bottom: 40px;
+}
+
+.postal-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.postal-gallery-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-vintage);
+}
+
+.postal-actions {
+    text-align: center;
+}
+
+/* Before/After */
+.antes-depois {
+    margin: 42px 0 30px;
+    padding: 18px 18px 14px;
+    border: 1px dashed var(--color-border-vintage);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-vintage);
+}
+
+.antes-depois__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.antes-depois__subtitle {
+    margin: 4px 0 0;
+    color: var(--color-muted);
+}
+
+.antes-depois__content {
+    margin-top: 18px;
+}
+
+.before-after {
+    --position: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border-soft);
+    box-shadow: var(--shadow-medium);
+    background: var(--color-surface);
+}
+
+.before-after__images {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--media-ratio, 4 / 3);
+    overflow: hidden;
+    background: #f7efe3;
+}
+
+.before-after__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-after__img--after {
+    clip-path: polygon(0 0, var(--position) 0, var(--position) 100%, 0 100%);
+    transition: clip-path var(--transition-base);
+}
+
+.before-after__divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--position));
+    width: 2px;
+    background: rgba(54, 39, 27, 0.9);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    transition: left var(--transition-base);
+}
+
+.before-after__range {
+    width: 100%;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.before-after__labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+    .postal-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .before-after {
+        border: none;
+        box-shadow: var(--shadow-vintage);
+        border-radius: var(--radius-md);
+    }
+
+    .before-after__images {
+        aspect-ratio: var(--media-ratio, 4 / 3);
+        max-height: min(72vh, 520px);
+        padding: 0;
+        background: var(--color-surface);
+    }
+
+    .before-after__img {
+        object-fit: contain;
+        background: inherit;
+    }
+
+    .before-after__labels {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+    }
+}

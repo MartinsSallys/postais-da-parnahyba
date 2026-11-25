@@ -1,0 +1,42 @@
+/* Postal Grid on Homepage */
+.postais-home {
+    padding: var(--spacing-4xl) 5%;
+    background: var(--color-bg);
+    position: relative;
+}
+
+.postais-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border-soft), transparent);
+}
+
+.postal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.card--postal .card__image {
+    aspect-ratio: 1;
+    filter: grayscale(20%) sepia(5%);
+}
+
+.card--postal .card__body {
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.card--postal .card__title {
+    font-size: 1rem;
+}
+
+.card--postal .card__description {
+    font-size: 0.85rem;
+}
